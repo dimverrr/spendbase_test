@@ -47,7 +47,7 @@ class RealtySpider(scrapy.Spider):
 
         df = pd.DataFrame(data_list)
 
-        sh = gc.open("spendbase_test")
+        sh = gc.open(os.getenv("SPREADSHEET_NAME"))
 
         wks = sh[0]
 
